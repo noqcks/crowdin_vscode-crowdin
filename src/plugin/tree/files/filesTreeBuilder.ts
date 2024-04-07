@@ -12,7 +12,8 @@ import { FilesTreeItem } from './filesTreeItem';
 
 import { promisify } from "util";
 import * as glob from "glob";
-const asyncGlob = promisify(glob);
+import * as glob from 'glob';
+const asyncGlob = promisify(glob.sync);
 
 export class FilesTreeBuilder {
     static async buildSubTree(
