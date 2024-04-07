@@ -6,7 +6,7 @@ export function run(testsRoot: string, cb: (error: any, failures?: number) => vo
     // Create the mocha test
     const mocha = new Mocha({
         ui: 'tdd',
-    });
+    }));
     mocha.options.color = true;
 
     import('glob').then(globModule => globModule.default('**/**.test.js', { cwd: testsRoot }, (err, files) => {
