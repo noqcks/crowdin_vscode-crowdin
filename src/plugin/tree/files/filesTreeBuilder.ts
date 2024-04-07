@@ -97,7 +97,7 @@ export class FilesTreeBuilder {
     ): Promise<FilesTreeItem> {
         const root = !!config.basePath ? path.join(workspace.uri.fsPath, config.basePath) : workspace.uri.fsPath;
         const promises = config.files.map(async (f) => {
-            let foundFiles = await asyncGlob(f.source, { root: root });
+            let foundFiles: string[] = await asyncGlob(f.source, { root: root }) as string[];
             const sourceFiles: SourceFiles = {
                 files: foundFiles,
                 sourcePattern: f.source,
