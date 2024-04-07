@@ -9,7 +9,7 @@ export function run(testsRoot: string, cb: (error: any, failures?: number) => vo
     });
     mocha.options.color = true;
 
-    import('glob').then(glob => glob('**/**.test.js', { cwd: testsRoot }, (err, files) => {
+    import('glob').then(globModule => globModule.default('**/**.test.js', { cwd: testsRoot }, (err, files) => {
         if (err) {
             return cb(err);
         }
