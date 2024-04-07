@@ -65,7 +65,7 @@ export class FilesTreeBuilder {
             let foundFiles = await asyncGlob(f.source, { root: root });
             foundFiles
                 .map((e: string) => path.relative(workspace.uri.fsPath, e))
-                .forEach((filePath) => {
+                .forEach((filePath: string) => {
                     const fileParts = filePath.split(path.sep);
                     let parentPart: string | undefined;
                     for (let i = 0; i < fileParts.length; i++) {
