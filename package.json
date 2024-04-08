@@ -350,7 +350,7 @@
 		"@crowdin/crowdin-api-client": "1.33.0",
 		"adm-zip": "^0.5.12",
 		"axios": "^1.6.8",
-		"glob": "^7.1.4",
+		"glob": "^10.3.12",
 		"original-fs": "^1.2.0",
 		"uuid": "^9.0.1",
 		"yaml": "^2.4.1"

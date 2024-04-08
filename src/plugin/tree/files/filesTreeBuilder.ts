@@ -10,7 +10,8 @@ import { SourceFiles } from '../../../model/sourceFiles';
 import { ContextValue } from '../contextValue';
 import { FilesTreeItem } from './filesTreeItem';
 
-const asyncGlob = util.promisify(glob);
+import glob from "glob";
+const asyncGlob = util.promisify(glob.glob);
 
 export class FilesTreeBuilder {
     static async buildSubTree(
