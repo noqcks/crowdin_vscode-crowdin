@@ -62,7 +62,7 @@ export class FilesTreeBuilder {
         const promises = config.files.map(async (f) => {
             let foundFiles = await asyncGlob(f.source, { root: root });
             foundFiles
-                .map((e) => path.relative(workspace.uri.fsPath, e))
+                .map((e: string) => path.relative(workspace.uri.fsPath, e))
                 .forEach((filePath) => {
                     const fileParts = filePath.split(path.sep);
                     let parentPart: string | undefined;
